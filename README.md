@@ -1,15 +1,24 @@
 # Consulta FIPE
 
-Página simples para consultar o preço de um carro usando a BrasilAPI e a Tabela FIPE.
+Aplicação web que consulta o preço de referência de um carro pela Tabela FIPE, usando a BrasilAPI.
 
-## Como usar
+## O que faz
 
-Abra `index.html` no navegador com conexão à internet. Escolha a marca, o modelo e o ano; depois clique em **Consultar preço**.
+- Carrega marcas, modelos e anos disponíveis para carros.
+- Consulta o preço e mostra ano e combustível.
+- Exibe aviso durante a consulta e mensagem em caso de erro.
+
+## Tecnologias
+
+HTML, CSS e JavaScript. O JavaScript usa `fetch` para buscar os dados na BrasilAPI.
+
+## Como abrir
+
+- **Online:** [abrir Consulta FIPE](https://ricardosilva-lgtm.github.io/consulta-fipe/).
+- **No computador:** abra `index.html` com o Live Server e mantenha a internet conectada.
 
 ## Arquivos
 
-- `index.html`: estrutura da página.
+- `index.html`: campos e estrutura da página.
 - `style.css`: aparência.
-- `script.js`: consulta à API, carregamento e resultado.
-
-Repositório: https://github.com/ricardosilva-lgtm/consulta-fipe
+- `script.js`: consultas à API e atualização da página.
