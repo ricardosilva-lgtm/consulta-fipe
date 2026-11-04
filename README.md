@@ -26,17 +26,6 @@ As consultas seguem a sequência documentada pela BrasilAPI:
 3. `/anos/v1/{tipo}/{codigoDaMarca}/{codigoDoModelo}`
 4. `/detalhes/v1/{tipo}/{codigoDaMarca}/{codigoDoModelo}/{codigoDoAno}`
 
-## Criar o repositório no GitHub
+## Repositório
 
-Crie um repositório vazio no GitHub. Depois, no terminal, dentro da pasta do projeto, execute:
-
-```bash
-git init
-git add .
-git commit -m "Cria consulta de preco pela Tabela FIPE"
-git branch -M main
-git remote add origin https://github.com/ricardosilva-lgtm/consulta-fipe.git
-git push -u origin main
-```
-
-O repositório remoto está configurado com o seu usuário `ricardosilva-lgtm`.
+O código-fonte está disponível no [GitHub](https://github.com/ricardosilva-lgtm/consulta-fipe).
