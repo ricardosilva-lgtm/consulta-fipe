@@ -3,59 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consulte o preço de carros, motos e caminhões pela tabela FIPE.">
-    <title>Consulta FIPE | Valor do veículo</title>
+    <title>Consulta FIPE</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main class="container">
-        <header class="cabecalho">
-            <p class="etiqueta">CONSULTA AUTOMOTIVA</p>
-            <h1>Consulte a Tabela FIPE</h1>
-            <p class="introducao">Escolha o veículo para consultar o valor de referência atualizado.</p>
-        </header>
+        <h1>Consulta Tabela FIPE</h1>
+        <p>Consulte o preço de um carro.</p>
 
-        <section class="painel" aria-labelledby="titulo-formulario">
-            <h2 id="titulo-formulario">Dados do veículo</h2>
-            <form id="formConsulta">
-                <div class="campo">
-                    <label for="tipoVeiculo">Tipo de veículo</label>
-                    <select id="tipoVeiculo" name="tipoVeiculo" required>
-                        <option value="carros">Carros</option>
-                        <option value="motos">Motos</option>
-                        <option value="caminhoes">Caminhões</option>
-                    </select>
-                </div>
+        <form id="formulario">
+            <label for="marca">Marca</label>
+            <select id="marca" required>
+                <option value="">Carregando marcas...</option>
+            </select>
 
-                <div class="campo">
-                    <label for="marca">Marca</label>
-                    <select id="marca" name="marca" required disabled>
-                        <option value="">Aguardando marcas...</option>
-                    </select>
-                </div>
+            <label for="modelo">Modelo</label>
+            <select id="modelo" required disabled>
+                <option value="">Selecione a marca primeiro</option>
+            </select>
 
-                <div class="campo">
-                    <label for="modelo">Modelo</label>
-                    <select id="modelo" name="modelo" required disabled>
-                        <option value="">Selecione uma marca primeiro</option>
-                    </select>
-                </div>
+            <label for="ano">Ano e combustível</label>
+            <select id="ano" required disabled>
+                <option value="">Selecione o modelo primeiro</option>
+            </select>
 
-                <div class="campo">
-                    <label for="ano">Ano e combustível</label>
-                    <select id="ano" name="ano" required disabled>
-                        <option value="">Selecione um modelo primeiro</option>
-                    </select>
-                </div>
+            <button id="consultar" disabled>Consultar preço</button>
+        </form>
 
-                <button id="btnConsultar" type="submit" disabled>Consultar preço</button>
-            </form>
-
-            <p id="status" class="status" role="status" aria-live="polite"></p>
-            <div id="resultado" class="resultado" aria-live="polite"></div>
-        </section>
-
-        <footer>Dados consultados pela API da BrasilAPI · referência da Tabela FIPE</footer>
+        <p id="status"></p>
+        <p id="resultado"></p>
     </main>
     <script src="script.js"></script>
 </body>
